@@ -55,8 +55,9 @@ function [scores, maxlabel] = classification_demo(im, use_gpu)
 % If you have multiple images, cat them with cat(4, ...)
 
 % Add caffe/matlab to you Matlab search PATH to use matcaffe
+% if exist('../+caffe', 'dir')
 if exist('../+caffe', 'dir')
-  addpath('..');
+  addpath('../../Build/x64/Release/matcaffe');
 else
   error('Please run this demo from caffe/matlab/demo');
 end
